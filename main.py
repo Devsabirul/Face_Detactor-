@@ -6,11 +6,10 @@ detector = FaceDetector()
 
 
 while True:
-    success, img = cam.read()
+    succ , img = cam.read()
     img,bBoxes = detector.findFaces(img)
     cv2.imshow("test", img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 cv2.destroyAllWindows()
-
